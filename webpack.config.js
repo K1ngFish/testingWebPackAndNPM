@@ -9,6 +9,10 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: "script_bundle.js",
     },
+    // Для TypeScript
+    // resolve: {
+    //     extensions: ['.tsx', '.ts', 'js']
+    // },
     devServer: {
       port: 9000,
       compress: true,
@@ -27,11 +31,12 @@ module.exports = {
                 test: /\.scss$/,
                 use: ['style-loader', 'css-loader', 'sass-loader']
             },
-            {
-                test: /\.ts$/,
-                use: 'ts-loader',
-                exclude: /node_modules/,
-            }
+            // Для TypeScript
+            // {
+            //     test: /\.ts$/,
+            //     use: 'ts-loader',
+            //     exclude: /node_modules/,
+            // }
         ],
     },
     plugins: [
