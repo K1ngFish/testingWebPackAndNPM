@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserPlugin = require("terser-webpack-plugin");
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -57,6 +58,7 @@ module.exports = {
             }
             // favicon: "./src/assets/favicon.png"
         }),
+        new ESLintPlugin(),
         // new HtmlWebpackPlugin({
         //     filename: "second_index_bundle.html",
         //     template: "src/second_index.html",

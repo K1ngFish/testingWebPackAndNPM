@@ -116,7 +116,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sass_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sass/main.scss */ \"./src/sass/main.scss\");\n\r\n\r\nconsole.log('Hello from development version!')\n\n//# sourceURL=webpack://frontendfeaturesnpm/./src/script-dev.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sass_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sass/main.scss */ \"./src/sass/main.scss\");\n\r\n\r\nconsole.log(\"Hello from development version!\");\n\n//# sourceURL=webpack://frontendfeaturesnpm/./src/script-dev.js?");
 
 /***/ })
 

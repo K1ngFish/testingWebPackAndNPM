@@ -1,3 +1,3 @@
-import './sass/main.scss'
+import "./sass/main.scss";
 
-console.log('Hello from development version!')
+alert("Hello from development version!");
