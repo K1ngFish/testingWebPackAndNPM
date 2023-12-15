@@ -1,3 +1,3 @@
 import './sass/main.scss'
 
-console.log('Hello from JS file!')
+console.log('Hello from production file!')
