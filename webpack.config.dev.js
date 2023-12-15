@@ -24,7 +24,12 @@ module.exports = {
         rules: [
             {
                 test: /\.pug$/,
-                use: 'pug-loader',
+                use: [{
+                    loader: 'pug-loader',
+                    options: {
+                        pretty: true,
+                    }
+                }]
             },
             {
                 test: /\.scss$/,
@@ -42,7 +47,14 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: "src/index.pug",
             filename: "index_bundle.html",
-            // minify: false,
+            minify: {
+                collapseWhitespace: false,
+                removeComments: false,
+                removeRedundantAttributes: false,
+                removeScriptTypeAttributes: false,
+                removeStyleLinkTypeAttributes: false,
+                useShortDoctype: false,
+            }
             // favicon: "./src/assets/favicon.png"
         }),
         // new HtmlWebpackPlugin({
@@ -51,7 +63,7 @@ module.exports = {
         // })
     ],
     optimization: {
-        minimize: true,
+        minimize: false,
         minimizer: [
             new TerserPlugin({
                 test: /\.js$/,
