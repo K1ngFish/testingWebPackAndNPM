@@ -16,10 +16,22 @@ module.exports = {
           directory: path.join(__dirname, 'dist')
       }
     },
+    module: {
+        rules: [
+            {
+                test: /\.pug$/,
+                use: 'pug-loader',
+            },
+            {
+                test: /\.scss$/,
+                use: ['style-loader', 'css-loader', 'sass-loader']
+            }
+        ],
+    },
     plugins: [
         new HtmlWebpackPlugin({
+            template: "src/index.pug",
             filename: "index_bundle.html",
-            template: "src/index.html",
             removeComments: true,
             // minify: false,
             // favicon: "./src/assets/favicon.png"
