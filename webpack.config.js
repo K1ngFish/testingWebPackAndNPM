@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
     mode: 'production',
@@ -25,6 +26,11 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: ['style-loader', 'css-loader', 'sass-loader']
+            },
+            {
+                test: /\.ts$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
             }
         ],
     },
@@ -40,5 +46,14 @@ module.exports = {
         //     filename: "second_index_bundle.html",
         //     template: "src/second_index.html",
         // })
-    ]
+    ],
+    optimization: {
+        minimize: true,
+        minimizer: [
+            new TerserPlugin({
+                test: /\.js$/,
+                exclude: /\/node_modules/,
+            })
+        ]
+    }
 }
