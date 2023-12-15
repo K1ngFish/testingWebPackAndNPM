@@ -8,6 +8,14 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: "script_bundle.js",
     },
+    devServer: {
+      port: 9000,
+      compress: true,
+      hot: true,
+      static: {
+          directory: path.join(__dirname, 'dist')
+      }
+    },
     plugins: [
         new HtmlWebpackPlugin({
             filename: "index_bundle.html",
