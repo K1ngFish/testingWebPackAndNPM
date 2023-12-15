@@ -68,6 +68,11 @@ module.exports = {
             new TerserPlugin({
                 test: /\.js$/,
                 exclude: /\/node_modules/,
+                terserOptions: {
+                    output: {
+                        comments: false,
+                    }
+                }
             })
         ]
     }
