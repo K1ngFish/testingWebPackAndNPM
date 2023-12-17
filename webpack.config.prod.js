@@ -32,6 +32,11 @@ module.exports = {
                 test: /\.scss$/,
                 use: ['style-loader', 'css-loader', 'sass-loader']
             },
+            {
+                test: /\.json$/,
+                use: 'json-loader',
+                type: 'javascript/auto',
+            }
             // Для TypeScript
             // {
             //     test: /\.ts$/,

@@ -12,9 +12,9 @@ module.exports = {
             },
             "files": ["script.js"],
             "rules": {
-                "semi": ["error", "always"],
-                "quotes": ["error", "double"],
-                "indent": ["error", 4],
+                // "semi": ["error", "always"],
+                // "quotes": ["error", "double"],
+                // "indent": ["error", 4],
                 "no-console": "error",
             },
             "parserOptions": {

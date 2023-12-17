@@ -1,11 +1,11 @@
+- const users = require('../database.json').users
+
 html
     head
         title Pug Template
     body
         main
             h1 Hi there!
-            p This is a simple Pug template
-            ul
-                li Item 1
-                li Item 2
-                li Item 3
+            p This is a simple Pug template with test database
+                each user in users
+                    p #{user.name}, #{user.age} age old
