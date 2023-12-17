@@ -1,3 +1,4 @@
 import "./sass/main.scss";
 
-console.log("Hello from development version!");
+alert("Hello from development version!");
+console.log('abc')
