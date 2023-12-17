@@ -25,7 +25,7 @@ module.exports = {
             // script-dev.js
             "files": ["script-dev.js"],
             "rules": {
-                "no-console": "error",
+                "no-console": "off",
             },
             "parserOptions": {
                 "sourceType": "module",

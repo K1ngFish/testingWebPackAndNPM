@@ -1,4 +1,8 @@
 import "./sass/main.scss";
 
 alert("Hello from development version!");
-console.log('abc')
+
+
+// for checking how husky works
+
+alert('123')
